@@ -56,6 +56,27 @@
         .products-bg {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
+        /* Video arka planı için özel stil */
+        .video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .video-container video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800 antialiased overflow-x-hidden selection:bg-brandTeal selection:text-white">
@@ -115,16 +136,18 @@
         </div>
     </nav>
 
-    <!-- VİDEOLU HERO (Giriş) Bölümü -->
-    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <!-- YENİ VİDEOLU HERO (Giriş) Bölümü -->
+    <section class="relative h-screen flex items-center pt-20">
         
-        <!-- Güvenilir CDN'den Molekül/Teknoloji Videosu -->
-        <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
-            <source src="https://assets.mixkit.co/videos/preview/mixkit-molecule-with-glowing-connections-31623-large.mp4" type="video/mp4">
-        </video>
+        <!-- Güvenilir Konuyla Alakalı Arka Plan Videosu (DNA/Medikal Animasyon) -->
+        <div class="video-container">
+            <video autoplay loop muted playsinline>
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-medical-animation-of-a-dna-strand-32865-large.mp4" type="video/mp4">
+            </video>
+        </div>
 
-        <!-- Videonun Üzerindeki Renkli Saydam Katman -->
-        <div class="absolute z-10 inset-0 bg-brandDark/70 bg-gradient-to-r from-[#0D1B2A]/90 to-[#2A9D8F]/50"></div>
+        <!-- Videonun Üzerindeki Renkli Saydam Katman (Karanlık/Turkuaz Filtre) -->
+        <div class="absolute z-10 inset-0 bg-brandDark/80 bg-gradient-to-r from-[#0D1B2A]/90 to-[#2A9D8F]/60"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
             <div class="text-center md:text-left md:w-2/3" data-aos="fade-right" data-aos-duration="1500">
@@ -174,7 +197,7 @@
                 
                 <!-- GÜNCELLENMİŞ GÖRSEL VE TESTIMONIAL ALANI -->
                 <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
-                    <!-- Sağlam ve Kalıcı Bir Görsel Linki ile Değiştirildi -->
+                    <!-- Sağlam ve Kalıcı Bir Görsel Linki -->
                     <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Laboratuvar Çalışması" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full">
                     
                     <div class="absolute -bottom-8 -left-8 md:bottom-10 md:-left-12 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] max-w-sm border-l-4 border-brandTeal glass-nav" data-aos="zoom-in" data-aos-delay="400">
@@ -300,7 +323,7 @@
     </section>
 
     <!-- İletişim & Footer -->
-    <footer class="bg-gray-900 pt-20 pb-10 border-t-4 border-brandTeal">
+    <footer id="contact" class="bg-gray-900 pt-20 pb-10 border-t-4 border-brandTeal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 
