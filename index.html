@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İmmuno Onko Center | Sağlık ve Güven</title>
     
-    <!-- Google Fonts: Modern tipografi için Poppins ve Inter -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- FontAwesome İkonları -->
+    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- AOS Animasyon Kütüphanesi CSS -->
+    <!-- AOS Animasyon -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <!-- Tailwind CSS (CDN) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Tailwind Özel Ayarlar ve Renk Paleti -->
+    <!-- Tailwind Ayarlar -->
     <script>
         tailwind.config = {
             theme: {
@@ -27,11 +27,10 @@
                         heading: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        brandDark: '#0D1B2A', /* Derin Lacivert */
+                        brandDark: '#0D1B2A',
                         brandBlue: '#1B263B', 
-                        brandTeal: '#2A9D8F', /* Logonun yeşil/turkuaz tonu */
+                        brandTeal: '#2A9D8F',
                         brandLight: '#E9F5F3',
-                        brandAccent: '#E07A5F'
                     }
                 }
             }
@@ -55,27 +54,6 @@
         }
         .products-bg {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-        /* Video arka planı için özel stil */
-        .video-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-        .video-container video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
         }
     </style>
 </head>
@@ -136,18 +114,16 @@
         </div>
     </nav>
 
-    <!-- YENİ VİDEOLU HERO (Giriş) Bölümü -->
-    <section class="relative h-screen flex items-center pt-20">
+    <!-- VİDEOLU HERO (Giriş) Bölümü - GÜNCELLENDİ -->
+    <section class="relative h-screen flex items-center pt-20 overflow-hidden bg-brandDark">
         
-        <!-- Güvenilir Konuyla Alakalı Arka Plan Videosu (DNA/Medikal Animasyon) -->
-        <div class="video-container">
-            <video autoplay loop muted playsinline>
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-medical-animation-of-a-dna-strand-32865-large.mp4" type="video/mp4">
-            </video>
-        </div>
+        <!-- YENİ ve STABİL VİDEO LİNKİ (Tailwind object-cover ile tam ekran yapıldı) -->
+        <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80">
+            <source src="https://cdn.pixabay.com/video/2020/03/19/33949-399066668_large.mp4" type="video/mp4">
+        </video>
 
-        <!-- Videonun Üzerindeki Renkli Saydam Katman (Karanlık/Turkuaz Filtre) -->
-        <div class="absolute z-10 inset-0 bg-brandDark/80 bg-gradient-to-r from-[#0D1B2A]/90 to-[#2A9D8F]/60"></div>
+        <!-- Videonun Üzerindeki Renkli Saydam Katman (Okunabilirlik İçin) -->
+        <div class="absolute z-10 inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/70 to-[#2A9D8F]/40"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
             <div class="text-center md:text-left md:w-2/3" data-aos="fade-right" data-aos-duration="1500">
@@ -195,9 +171,8 @@
                     </a>
                 </div>
                 
-                <!-- GÜNCELLENMİŞ GÖRSEL VE TESTIMONIAL ALANI -->
+                <!-- Sağ Görsel ve Testimonial ALANI -->
                 <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
-                    <!-- Sağlam ve Kalıcı Bir Görsel Linki -->
                     <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Laboratuvar Çalışması" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full">
                     
                     <div class="absolute -bottom-8 -left-8 md:bottom-10 md:-left-12 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] max-w-sm border-l-4 border-brandTeal glass-nav" data-aos="zoom-in" data-aos-delay="400">
