@@ -76,13 +76,13 @@
     <nav class="glass-nav fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- Logo -->
-                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <img src="immunologo.png" alt="İmmuno Onko Center Logo" class="h-20 drop-shadow-md rounded-full object-contain">
+                <!-- LOGO KISMI GÜNCELLENDİ: Büyütüldü ve Kısıtlamalar Kaldırıldı -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.scrollTo(0,0)">
+                    <img src="immunologo.png" alt="İmmuno Onko Center Logo" class="h-20 md:h-24 w-auto object-contain transform origin-left scale-125 md:scale-150 transition-transform duration-300 hover:scale-[1.6]">
                 </div>
                 
                 <!-- Masaüstü Menü -->
-                <div class="hidden lg:flex items-center space-x-8">
+                <div class="hidden lg:flex items-center space-x-8 pl-10">
                     <a href="index.html" class="text-brandTeal font-semibold border-b-2 border-brandTeal pb-1">Ana sayfa</a>
                     
                     <div class="relative group">
@@ -114,15 +114,15 @@
         </div>
     </nav>
 
-    <!-- VİDEOLU HERO (Giriş) Bölümü - LOKAL DOSYA İLE -->
+    <!-- VİDEOLU HERO (Giriş) Bölümü -->
     <section class="relative h-screen flex items-center pt-20 overflow-hidden bg-brandDark">
         
-        <!-- YEREL VİDEO: "bg-video.mp4" dosyası klasörde bulunmalı -->
+        <!-- YEREL VİDEO: "bg-video.mp4" -->
         <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80">
             <source src="bg-video.mp4" type="video/mp4">
         </video>
 
-        <!-- Videonun Üzerindeki Renkli Saydam Katman (Okunabilirlik İçin) -->
+        <!-- Videonun Üzerindeki Renkli Saydam Katman -->
         <div class="absolute z-10 inset-0 bg-gradient-to-r from-[#0D1B2A]/95 via-[#0D1B2A]/70 to-[#2A9D8F]/40"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
@@ -297,13 +297,13 @@
         </div>
     </section>
 
-    <!-- İletişim & Footer -->
+    <!-- İletişim & Footer GÜNCELLENDİ (Footer Logo Boyutu) -->
     <footer id="contact" class="bg-gray-900 pt-20 pb-10 border-t-4 border-brandTeal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
                 
                 <div data-aos="fade-up" data-aos-delay="100">
-                    <img src="immunologo.png" alt="Logo" class="h-20 mb-6 bg-white p-2 rounded-xl object-contain">
+                    <img src="immunologo.png" alt="Logo" class="h-28 w-auto mb-6 bg-white p-3 rounded-xl object-contain">
                     <p class="text-gray-400 leading-relaxed mb-6">
                         Biyoteknoloji ve onkolojide 2015'ten beri bilimsel çözümlerle sağlığınıza değer katıyoruz.
                     </p>
