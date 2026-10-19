@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | İmmuno Onko Center</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'], heading: ['Poppins', 'sans-serif'] },
+                    colors: { brandDark: '#0D1B2A', brandTeal: '#2A9D8F', brandLight: '#E9F5F3' }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(0,0,0,0.05); }
+        .page-header { background: linear-gradient(to right, rgba(13, 27, 42, 0.9), rgba(42, 157, 143, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop') center/cover; }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- Navigasyon -->
+    <nav class="glass-nav fixed w-full z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="index.html" class="flex items-center">
+                    <img src="immunologo.png" alt="Logo" class="h-20 drop-shadow-md rounded-full object-contain">
+                </a>
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-brandDark hover:text-brandTeal font-medium">Ana sayfa</a>
+                    <a href="hakkimizda.html" class="text-brandDark hover:text-brandTeal font-medium">Hakkımızda</a>
+                    <a href="kurumsal.html" class="text-brandDark hover:text-brandTeal font-medium">Kurumsal</a>
+                    <a href="birimlerimiz.html" class="text-brandDark hover:text-brandTeal font-medium">Birimlerimiz</a>
+                    <a href="iletisim.html" class="text-brandTeal font-semibold border-b-2 border-brandTeal pb-1">İletişim</a>
+                    <a href="https://wa.me/905442642593" target="_blank" class="bg-[#25D366] text-white px-6 py-2.5 rounded-full font-medium hover:bg-green-600 transition shadow-lg flex items-center">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Whatsapp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header pt-40 pb-20 text-center relative">
+        <div class="max-w-7xl mx-auto px-4 relative z-10" data-aos="fade-up">
+            <h1 class="text-4xl md:text-5xl font-heading font-bold text-white mb-4">Bize Ulaşın</h1>
+            <p class="text-lg text-brandLight max-w-2xl mx-auto mb-6">Sorularınız, randevu ve ürün siparişleriniz için her zaman yanınızdayız.</p>
+        </div>
+    </header>
+
+    <!-- İletişim İçeriği -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <!-- Sol: İletişim Bilgileri -->
+                <div data-aos="fade-right">
+                    <h2 class="font-heading text-3xl font-bold text-brandDark mb-6">İletişim Bilgilerimiz</h2>
+                    <div class="w-16 h-1 bg-brandTeal rounded mb-10"></div>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-brandTeal text-2xl mr-6">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-brandDark">Sedat Keleş</h4>
+                                <p class="text-gray-500">Merkez Müdürü / Biyoteknoloji & Onkoloji Uzmanı</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-brandTeal text-2xl mr-6">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-brandDark">Telefon / Whatsapp</h4>
+                                <a href="tel:05442642593" class="text-gray-600 hover:text-brandTeal transition text-lg">0544 264 25 93</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-brandTeal text-2xl mr-6">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-brandDark">E-Posta</h4>
+                                <a href="mailto:info@immunoonkocenter.com" class="text-gray-600 hover:text-brandTeal transition text-lg">info@immunoonkocenter.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-2xl flex items-center justify-center text-brandTeal text-2xl mr-6">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-brandDark">Merkez Ofis</h4>
+                                <p class="text-gray-600 text-lg">Düzce, Türkiye (Randevu ile ziyaret ediniz)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sağ: Form -->
+                <div class="bg-white p-10 rounded-3xl shadow-xl border border-gray-100" data-aos="fade-left">
+                    <h3 class="font-heading text-2xl font-bold text-brandDark mb-6">Bize Mesaj Gönderin</h3>
+                    <form action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Adınız Soyadınız</label>
+                            <input type="text" class="w-full px-5 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brandTeal focus:border-transparent outline-none transition" placeholder="Örn: Sedat Keleş">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Telefon</label>
+                                <input type="tel" class="w-full px-5 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brandTeal outline-none transition" placeholder="05XX XXX XX XX">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">E-Posta</label>
+                                <input type="email" class="w-full px-5 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brandTeal outline-none transition" placeholder="ornek@mail.com">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Mesajınız</label>
+                            <textarea rows="4" class="w-full px-5 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:ring-2 focus:ring-brandTeal outline-none transition resize-none" placeholder="Size nasıl yardımcı olabiliriz?"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-brandDark text-white font-bold py-4 rounded-xl hover:bg-brandTeal transition duration-300">
+                            Mesajı Gönder
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Google Maps -->
+    <section class="h-96 w-full" data-aos="fade-in">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96336.85293675204!2d31.0664911!3d40.8447844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x409d74eab3c2d665%3A0xbc1ecbc5b8a071!2zRMO8emNlLCBEw7x6Y2UgTWVya2V6L0TDvHpjZQ!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ duration: 800, once: true });</script>
+</body>
+</html>

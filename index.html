@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="tr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İmmuno Onko Center | Sağlık ve Güven</title>
+    
+    <!-- Google Fonts: Modern tipografi için Poppins ve Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome İkonları -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animasyon Kütüphanesi CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Özel Ayarlar ve Renk Paleti -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#0D1B2A', /* Derin Lacivert */
+                        brandBlue: '#1B263B', 
+                        brandTeal: '#2A9D8F', /* Logonun yeşil/turkuaz tonu */
+                        brandLight: '#E9F5F3',
+                        brandAccent: '#E07A5F'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #2A9D8F, #48cae4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .products-bg {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden selection:bg-brandTeal selection:text-white">
+
+    <!-- Üst Bilgi Barı -->
+    <div class="bg-brandDark text-gray-300 text-sm py-2 hidden md:block relative z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
+            <div class="flex items-center space-x-6">
+                <span><i class="fas fa-envelope text-brandTeal mr-2"></i> info@immunoonkocenter.com</span>
+                <span><i class="fas fa-map-marker-alt text-brandTeal mr-2"></i> Düzce, Türkiye</span>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span class="font-semibold text-white tracking-wider">WHATSAPP: <a href="https://wa.me/905442642593" class="hover:text-brandTeal transition">0 544 264 25 93</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigasyon (Menü) -->
+    <nav class="glass-nav fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <!-- LOGO DÜZELTİLDİ: immunologo.png yapıldı -->
+                <div class="flex-shrink-0 flex items-center cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="immunologo.png" alt="İmmuno Onko Center Logo" class="h-20 drop-shadow-md rounded-full object-contain">
+                </div>
+                
+                <!-- Masaüstü Menü -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="index.html" class="text-brandTeal font-semibold border-b-2 border-brandTeal pb-1">Ana sayfa</a>
+                    
+                    <div class="relative group">
+                        <button class="text-brandDark hover:text-brandTeal font-medium transition flex items-center pb-1">
+                            Hakkımızda <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-48 bg-white rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform origin-top-left scale-95 group-hover:scale-100">
+                            <a href="hakkimizda.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brandLight hover:text-brandTeal rounded-t-xl">Hakkımızda</a>
+                            <a href="kalite-politikasi.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brandLight hover:text-brandTeal">Kalite Politikası</a>
+                            <a href="ihracat-politikasi.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-brandLight hover:text-brandTeal rounded-b-xl">İhracat Politikası</a>
+                        </div>
+                    </div>
+
+                    <a href="kurumsal.html" class="text-brandDark hover:text-brandTeal font-medium transition pb-1">Kurumsal</a>
+                    <a href="birimlerimiz.html" class="text-brandDark hover:text-brandTeal font-medium transition pb-1">Birimlerimiz</a>
+                    <a href="#contact" class="text-brandDark hover:text-brandTeal font-medium transition pb-1">İletişim</a>
+                    <a href="#store" class="text-brandDark hover:text-brandTeal font-medium transition pb-1">Store <i class="fas fa-shopping-bag ml-1"></i></a>
+                    
+                    <div class="flex space-x-3 text-lg border-l pl-6 border-gray-200">
+                        <a href="#" class="text-gray-400 hover:text-brandTeal transition"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-brandTeal transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    
+                    <a href="https://wa.me/905442642593" target="_blank" class="bg-[#25D366] text-white px-6 py-2.5 rounded-full font-medium hover:bg-green-600 transition shadow-lg shadow-green-200 flex items-center">
+                        <i class="fab fa-whatsapp text-xl mr-2"></i> Whatsapp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- VİDEOLU HERO (Giriş) Bölümü -->
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        
+        <!-- Güvenilir CDN'den Molekül/Teknoloji Videosu -->
+        <video autoplay loop muted playsinline class="absolute z-0 w-auto min-w-full min-h-full max-w-none object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-molecule-with-glowing-connections-31623-large.mp4" type="video/mp4">
+        </video>
+
+        <!-- Videonun Üzerindeki Renkli Saydam Katman -->
+        <div class="absolute z-10 inset-0 bg-brandDark/70 bg-gradient-to-r from-[#0D1B2A]/90 to-[#2A9D8F]/50"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 w-full">
+            <div class="text-center md:text-left md:w-2/3" data-aos="fade-right" data-aos-duration="1500">
+                <div class="inline-block px-4 py-2 rounded-full bg-brandTeal/20 text-brandTeal font-semibold tracking-wide text-sm mb-6 border border-brandTeal/30 backdrop-blur-md">
+                    Est. 2015 | Uzmanlık ve Güven
+                </div>
+                <h1 class="font-heading text-5xl md:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg">
+                    İmmuno Onko Center ile <br> <span class="gradient-text drop-shadow-none">Sağlığa Güvenle</span>
+                </h1>
+                <p class="text-xl text-gray-200 mb-10 font-light max-w-2xl leading-relaxed drop-shadow-md">
+                    İlaç ve biyoteknolojide öncü çözümlerle sağlığınıza değer katıyoruz. Modern bilimin ışığında, kişiselleştirilmiş tedavi yaklaşımları.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 md:justify-start justify-center">
+                    <a href="#contact" class="bg-brandTeal text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brandTeal transition duration-300 shadow-[0_0_20px_rgba(42,157,143,0.5)] text-center">
+                        İletişime Geç
+                    </a>
+                    <a href="#about" class="bg-transparent border border-white/70 text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-brandDark transition duration-300 text-center backdrop-blur-sm">
+                        Daha Fazla
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Aşağı Kaydır İkonu -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-20">
+            <a href="#about" class="text-white opacity-70 hover:opacity-100 transition"><i class="fas fa-chevron-down text-4xl drop-shadow-lg"></i></a>
+        </div>
+    </section>
+
+    <!-- Hakkımızda & Güven Bölümü (Dr. Ayşe Yorumu) -->
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Sol Metin -->
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold text-brandDark mb-6 leading-tight">
+                        İmmuno Onko Center <br><span class="text-brandTeal">Sağlık ve Güven</span>
+                    </h2>
+                    <div class="w-20 h-1.5 bg-brandTeal rounded-full mb-8"></div>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        İmmuno Onko Center olarak, biyoteknoloji ve onkolojide bilimsel çözümlerle sağlığınıza değer katıyoruz. Araştırma ve geliştirme odaklı altyapımızla, yarının tedavi yöntemlerini bugünden sunmayı hedefliyoruz.
+                    </p>
+                    <a href="kurumsal.html" class="inline-flex items-center px-6 py-3 border-2 border-gray-900 rounded-full text-gray-900 font-semibold hover:bg-gray-900 hover:text-white transition group">
+                        Daha Fazla <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition"></i>
+                    </a>
+                </div>
+                
+                <!-- Sağ Görsel ve Testimonial -->
+                <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?q=80&w=2070&auto=format&fit=crop" alt="Laboratuvar Çalışması" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full">
+                    
+                    <div class="absolute -bottom-8 -left-8 md:bottom-10 md:-left-12 bg-white p-8 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] max-w-sm border-l-4 border-brandTeal glass-nav" data-aos="zoom-in" data-aos-delay="400">
+                        <i class="fas fa-quote-left text-3xl text-brandTeal/30 absolute top-4 left-4"></i>
+                        <p class="text-brandDark font-medium text-lg relative z-10 italic mb-4 mt-2">
+                            "Profesyonel ve güvenilir hizmet."
+                        </p>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-brandLight rounded-full flex items-center justify-center text-brandTeal font-bold mr-3">
+                                DR
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-900">Dr. Ayşe</h4>
+                                <p class="text-sm text-gray-500">Uzman Hekim</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hizmetlerimiz Bölümü -->
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-4xl font-bold text-brandDark mb-4">Hizmetlerimiz</h2>
+                <p class="text-xl text-gray-600">İmmünoterapi ve biyoteknoloji alanında uzman çözümler sunuyoruz.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=800&auto=format&fit=crop" alt="İmmünoterapi" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brandDark mb-3">İmmünoterapi</h3>
+                        <p class="text-gray-600">Bağışıklık sistemini güçlendiren yenilikçi tedavi yöntemleri.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?q=80&w=800&auto=format&fit=crop" alt="Biyoteknoloji" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brandDark mb-3">Biyoteknoloji</h3>
+                        <p class="text-gray-600">Gelişmiş biyoteknolojik ürünlerle sağlık çözümleri geliştiriyoruz.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl overflow-hidden shadow-lg card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?q=80&w=800&auto=format&fit=crop" alt="Onkoloji" class="w-full h-full object-cover transition duration-500 hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="font-heading text-2xl font-bold text-brandDark mb-3">Onkoloji</h3>
+                        <p class="text-gray-600">Onkoloji alanında kişiye özel tedavi planları sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ürünler Bölümü -->
+    <section id="store" class="py-24 products-bg relative">
+        <div class="absolute top-0 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg class="relative block w-full h-12" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#f9fafb"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-10">
+            <div class="text-center max-w-4xl mx-auto mb-16 text-white" data-aos="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6">Ürünler</h2>
+                <p class="text-lg text-white/90 leading-relaxed mb-8">
+                    Yeni nesil probiyotik ve probiyotik gıda takviyeleriyle iyiliğe önce kendinizden başlayın. Gıda takviyeleri, yeterli miktarda gün içinde alınmayan besinlerin yerinin doldurulması veya özel diyet programlarında ihtiyaç duyulan vitamin, mineral, amino asitlerin karşılanması için formüle edilmiştir.
+                </p>
+                <a href="#store" class="inline-block border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition duration-300">
+                    Online Shop
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 card-hover group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="rounded-xl overflow-hidden mb-4 h-48 bg-white flex items-center justify-center p-4">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop" alt="Takviye Edici Gıdalar" class="h-full object-contain group-hover:scale-105 transition">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center py-2">Takviye Edici Gıdalar</h3>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 card-hover group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="rounded-xl overflow-hidden mb-4 h-48 bg-white flex items-center justify-center p-4">
+                        <img src="https://images.unsplash.com/photo-1550572017-edb799988a65?q=80&w=800&auto=format&fit=crop" alt="Bağışıklık Sistemi Vitamin Ürünleri" class="h-full object-contain group-hover:scale-105 transition">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center py-2">Bağışıklık Sistemi Vitamin Ürünleri</h3>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 card-hover group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="rounded-xl overflow-hidden mb-4 h-48 bg-white flex items-center justify-center p-4">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop" alt="Kozmetik Ürünleri" class="h-full object-contain group-hover:scale-105 transition">
+                    </div>
+                    <h3 class="text-xl font-semibold text-white text-center py-2">Kozmetik Ürünleri</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Online Shop Sipariş Call To Action -->
+    <section class="py-20 bg-brandDark text-center border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-4" data-aos="zoom-in">
+            <h2 class="font-heading text-4xl font-bold text-white mb-4">Online Shop</h2>
+            <p class="text-gray-400 text-lg mb-8">Telefon + Email + Whatsapp üzerinden Bize Sipariş Verebilirsiniz.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="https://wa.me/905442642593" class="bg-transparent border border-brandTeal text-brandTeal px-10 py-3 rounded-full font-bold hover:bg-brandTeal hover:text-white transition w-full sm:w-auto">
+                    Online Shop Giriş
+                </a>
+                <a href="tel:05442642593" class="bg-brandTeal text-white px-10 py-3 rounded-full font-bold hover:bg-white hover:text-brandTeal transition w-full sm:w-auto">
+                    <i class="fas fa-phone-alt mr-2"></i> Hemen Ara
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- İletişim & Footer DÜZELTİLDİ: immunologo.png yapıldı -->
+    <footer id="contact" class="bg-gray-900 pt-20 pb-10 border-t-4 border-brandTeal">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+                
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <img src="immunologo.png" alt="Logo" class="h-20 mb-6 bg-white p-2 rounded-xl object-contain">
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Biyoteknoloji ve onkolojide 2015'ten beri bilimsel çözümlerle sağlığınıza değer katıyoruz.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brandTeal hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brandTeal hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-brandTeal hover:text-white transition"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <h4 class="text-white text-xl font-bold mb-6 font-heading relative inline-block">
+                        Hızlı Linkler
+                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brandTeal rounded-full"></span>
+                    </h4>
+                    <ul class="space-y-3">
+                        <li><a href="hakkimizda.html" class="text-gray-400 hover:text-brandTeal transition flex items-center"><i class="fas fa-angle-right mr-2 text-xs"></i> Hakkımızda</a></li>
+                        <li><a href="kurumsal.html" class="text-gray-400 hover:text-brandTeal transition flex items-center"><i class="fas fa-angle-right mr-2 text-xs"></i> Kurumsal</a></li>
+                        <li><a href="kalite-politikasi.html" class="text-gray-400 hover:text-brandTeal transition flex items-center"><i class="fas fa-angle-right mr-2 text-xs"></i> Kalite Politikası</a></li>
+                        <li><a href="ihracat-politikasi.html" class="text-gray-400 hover:text-brandTeal transition flex items-center"><i class="fas fa-angle-right mr-2 text-xs"></i> İhracat Politikası</a></li>
+                    </ul>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300">
+                    <h4 class="text-white text-xl font-bold mb-6 font-heading relative inline-block">
+                        Merkez Yönetimi & İletişim
+                        <span class="absolute -bottom-2 left-0 w-1/2 h-1 bg-brandTeal rounded-full"></span>
+                    </h4>
+                    
+                    <div class="bg-gray-800/50 p-6 rounded-2xl border border-gray-700">
+                        <h5 class="text-brandTeal font-bold text-lg">SEDAT KELEŞ</h5>
+                        <p class="text-gray-400 text-sm mb-4 border-b border-gray-700 pb-4">Biyoteknoloji & Onkoloji Uzmanı <br> Merkez Müdürü</p>
+                        
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <i class="fas fa-phone-alt text-brandTeal mt-1 mr-3"></i>
+                                <div>
+                                    <span class="block text-gray-300 font-medium">0544 264 25 93</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-envelope text-brandTeal mt-1 mr-3"></i>
+                                <div>
+                                    <span class="block text-gray-300">info@immunoonkocenter.com</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm">
+                <p>&copy; 2024 İmmuno Onko Center (EST. 2015). Tüm Hakları Saklıdır.</p>
+                <p class="mt-2 md:mt-0">Tasarım & Altyapı Yenileniyor.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sağ Alt Sabit Whatsapp Butonu -->
+    <a href="https://wa.me/905442642593" target="_blank" class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-[0_4px_15px_rgba(37,211,102,0.4)] hover:scale-110 transition-transform z-50 animate-bounce">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- AOS Animasyon Scripti -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true, 
+            offset: 50
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
