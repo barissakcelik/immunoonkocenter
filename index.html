@@ -49,8 +49,9 @@
         }
         .gradient-text {
             background: linear-gradient(to right, #2A9D8F, #48cae4);
+            background-clip: text; /* Sarı uyarıyı yok edecek standart kod eklendi */
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+           -webkit-text-fill-color: transparent;
         }
         .products-bg {
             background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
@@ -59,12 +60,11 @@
 </head>
 <body class="font-sans text-gray-800 antialiased overflow-x-hidden selection:bg-brandTeal selection:text-white">
 
-    <!-- Üst Bilgi Barı -->
+    <!-- Üst Bilgi Barı (Adres Kaldırıldı) -->
     <div class="bg-brandDark text-gray-300 text-sm py-2 hidden md:block relative z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
             <div class="flex items-center space-x-6">
                 <span><i class="fas fa-envelope text-brandTeal mr-2"></i> info@immunoonkocenter.com</span>
-                <span><i class="fas fa-map-marker-alt text-brandTeal mr-2"></i> Düzce, Türkiye</span>
             </div>
             <div class="flex items-center space-x-4">
                 <span class="font-semibold text-white tracking-wider">WHATSAPP: <a href="https://wa.me/905442642593" class="hover:text-brandTeal transition">0 544 264 25 93</a></span>
@@ -76,7 +76,7 @@
     <nav class="glass-nav fixed w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
-                <!-- LOGO KISMI GÜNCELLENDİ: Büyütüldü ve Kısıtlamalar Kaldırıldı -->
+                <!-- LOGO -->
                 <div class="flex-shrink-0 flex items-center cursor-pointer py-2" onclick="window.scrollTo(0,0)">
                     <img src="immunologo.png" alt="İmmuno Onko Center Logo" class="h-20 md:h-24 w-auto object-contain transform origin-left scale-125 md:scale-150 transition-transform duration-300 hover:scale-[1.6]">
                 </div>
@@ -117,7 +117,7 @@
     <!-- VİDEOLU HERO (Giriş) Bölümü -->
     <section class="relative h-screen flex items-center pt-20 overflow-hidden bg-brandDark">
         
-        <!-- YEREL VİDEO: "bg-video.mp4" -->
+        <!-- YEREL VİDEO -->
         <video autoplay loop muted playsinline class="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-80">
             <source src="bg-video.mp4" type="video/mp4">
         </video>
@@ -153,11 +153,10 @@
         </div>
     </section>
 
-    <!-- Hakkımızda & Güven Bölümü (Dr. Ayşe Yorumu) -->
+    <!-- Hakkımızda & Güven Bölümü -->
     <section id="about" class="py-24 bg-white relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-16">
-                <!-- Sol Metin -->
                 <div class="lg:w-1/2" data-aos="fade-right">
                     <h2 class="font-heading text-4xl md:text-5xl font-bold text-brandDark mb-6 leading-tight">
                         İmmuno Onko Center <br><span class="text-brandTeal">Sağlık ve Güven</span>
@@ -171,7 +170,6 @@
                     </a>
                 </div>
                 
-                <!-- Sağ Görsel ve Testimonial ALANI -->
                 <div class="lg:w-1/2 relative" data-aos="fade-left" data-aos-delay="200">
                     <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Laboratuvar Çalışması" class="rounded-3xl shadow-2xl object-cover h-[500px] w-full">
                     
@@ -259,21 +257,21 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 card-hover group" data-aos="fade-up" data-aos-delay="100">
                     <div class="rounded-xl overflow-hidden mb-4 h-48 bg-white flex items-center justify-center p-4">
-                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?q=80&w=800&auto=format&fit=crop" alt="Takviye Edici Gıdalar" class="h-full object-contain group-hover:scale-105 transition">
+                        <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Takviye Edici Gıdalar" class="h-full object-contain group-hover:scale-105 transition">
                     </div>
                     <h3 class="text-xl font-semibold text-white text-center py-2">Takviye Edici Gıdalar</h3>
                 </div>
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 card-hover group" data-aos="fade-up" data-aos-delay="200">
                     <div class="rounded-xl overflow-hidden mb-4 h-48 bg-white flex items-center justify-center p-4">
-                        <img src="https://images.unsplash.com/photo-1550572017-edb799988a65?q=80&w=800&auto=format&fit=crop" alt="Bağışıklık Sistemi Vitamin Ürünleri" class="h-full object-contain group-hover:scale-105 transition">
+                        <img src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bağışıklık Sistemi Vitamin Ürünleri" class="h-full object-contain group-hover:scale-105 transition">
                     </div>
                     <h3 class="text-xl font-semibold text-white text-center py-2">Bağışıklık Sistemi Vitamin Ürünleri</h3>
                 </div>
 
                 <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20 card-hover group" data-aos="fade-up" data-aos-delay="300">
                     <div class="rounded-xl overflow-hidden mb-4 h-48 bg-white flex items-center justify-center p-4">
-                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?q=80&w=800&auto=format&fit=crop" alt="Kozmetik Ürünleri" class="h-full object-contain group-hover:scale-105 transition">
+                        <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kozmetik Ürünleri" class="h-full object-contain group-hover:scale-105 transition">
                     </div>
                     <h3 class="text-xl font-semibold text-white text-center py-2">Kozmetik Ürünleri</h3>
                 </div>
@@ -297,7 +295,7 @@
         </div>
     </section>
 
-    <!-- İletişim & Footer GÜNCELLENDİ (Footer Logo Boyutu) -->
+    <!-- İletişim & Footer -->
     <footer id="contact" class="bg-gray-900 pt-20 pb-10 border-t-4 border-brandTeal">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
@@ -387,3 +385,4 @@
     </script>
 </body>
 </html>
+```<FollowUp></FollowUp>
